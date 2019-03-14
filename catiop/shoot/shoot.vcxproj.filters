@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WinProc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Charactor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="setkeyfps.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="bubble.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="eff.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="bubbledie.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Charactor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="shoot.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\노란집 완성.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\img\포맷변환_e0079100_475562024ff12[1].bmp.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 이게진짜1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 이게진짜 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\풍선 완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\풍선완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 정면 완성작1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 정면 흑백.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 위로 정면 가만히.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 위로갈때 완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\짜배찌 오른쪽 1.1 진.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\백배찌 오른쪽 진짜 흑.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 오른쪽 정면 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 오른쪽 정면 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 왼쪽 정면 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\쪽배찌 왼 정면 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\잔디.1 완성본.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\잔디 2 완성본.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\도로 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\도로 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\짜풍선 1111 진.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\전풍선 1111진짜 반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기 완성2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기 완성 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\빨간블록 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황블록 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\박스 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\나무 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\나무 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\노란집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황집 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\파란집 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\파란집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\숲 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\숲3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\위 딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\위 딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 가1 검.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 가1 반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 위1검.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 위1반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\배찌방울갇힘.png" />
+    <None Include="..\..\..\물방울갇힘2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\img\포맷변환_e0079100_475562024ff12[1].bmp.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 이게진짜 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 이게진짜1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\풍선 완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\풍선완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 정면 완성작1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 정면 흑백.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 위로 정면 가만히.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 위로갈때 완성본1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\짜배찌 오른쪽 1.1 진.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\백배찌 오른쪽 진짜 흑.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 오른쪽 정면 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 오른쪽 정면 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\잔디.1 완성본.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\잔디 2 완성본.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\도로 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\도로 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 왼쪽 정면 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\쪽배찌 왼 정면 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\짜풍선 1111 진.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\전풍선 1111진짜 반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기 완성2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기 완성 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\빨간블록 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황블록 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\박스 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\나무 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\나무 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\노란집 완성.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\노란집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황집 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\파란집 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\파란집 3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\숲 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\숲3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 가1 검.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 가1 반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 위1검.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 위1반.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\배찌방울갇힘 1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+</Project>

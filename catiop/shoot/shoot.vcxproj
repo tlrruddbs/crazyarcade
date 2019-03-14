@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4DDEEDD6-453A-4E3E-A5F8-263BD807C181}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>winmm.lib %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)shoot.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)shoot.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)shoot.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Charactor.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="WinProc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bubble.h" />
+    <ClInclude Include="bubbledie.h" />
+    <ClInclude Include="Charactor.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="eff.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="setkeyfps.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="shoot.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\게임만드는중 - 복사본\img\포맷변환_e0079100_475562024ff12[1].bmp.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\나무 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\나무 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\노란집 3.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\노란집 완성.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\박스 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\빨간블록 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\숲 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\숲3.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황블록 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황집 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\주황집 3.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\파란집 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\가마우지\파란집 3.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\도로 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\도로 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\잔디 2 완성본.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배경\잔디.1 완성본.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 오른쪽 정면 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 오른쪽 정면 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 왼쪽 정면 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 위로 정면 가만히.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 위로갈때 완성본1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 이게진짜 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 이게진짜1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 정면 완성작1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\배찌 정면 흑백.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\백배찌 오른쪽 진짜 흑.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\전풍선 1111진짜 반.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\짜배찌 오른쪽 1.1 진.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\짜풍선 1111 진.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\쪽배찌 왼 정면 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\풍선 완성본1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\img\풍선완성본1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기 완성 3.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기 완성2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 가1 검.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 가1 반.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 위1검.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\물줄기 위1반.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 2.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 1.bmp" />
+    <None Include="..\..\..\게임만드는중 - 복사본\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 2.bmp" />
+    <None Include="..\..\..\물방울갇힘2.bmp" />
+    <None Include="..\..\..\배찌방울갇힘 1.bmp" />
+    <None Include="..\..\..\배찌방울갇힘.png" />
+    <None Include="..\..\img\포맷변환_e0079100_475562024ff12[1].bmp.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\나무 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\나무 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\노란집 3.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\노란집 완성.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\박스 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\빨간블록 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\숲 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\숲3.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황블록 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황집 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\주황집 3.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\파란집 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\가마우지\파란집 3.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\도로 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\도로 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\잔디 2 완성본.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배경\잔디.1 완성본.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 오른쪽 정면 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 오른쪽 정면 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 왼쪽 정면 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 위로 정면 가만히.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 위로갈때 완성본1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 이게진짜 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 이게진짜1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 정면 완성작1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\배찌 정면 흑백.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\백배찌 오른쪽 진짜 흑.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\왼쪽 배찌 왼쪽 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\전풍선 1111진짜 반.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\짜배찌 오른쪽 1.1 진.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\짜풍선 1111 진.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\쪽배찌 왼 정면 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\풍선 완성본1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\img\풍선완성본1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기 완성 3.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기 완성2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 가1 검.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 가1 반.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 위1검.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\물줄기 위1반.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\아래 딱맞음 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\오른 딱맞음 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\왼딱맞음 2.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\위 딱맞음 1.bmp" />
+    <None Include="..\..\배찌게임만들기 사진\물줄기\원앙\위 딱맞음 2.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

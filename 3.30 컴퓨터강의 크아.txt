@@ -1,0 +1,368 @@
+#include "setkeyfps.h"
+#include<list>
+#include <stdlib.h>
+#include<math.h>
+#define qwe 3;
+
+
+using namespace std;
+int count=0;
+int a=0;
+int check=0;
+int check1=0;
+int check2=0;
+
+class map1{
+	public:
+		int x;
+		int y;
+		int color1;
+		map1()
+		{
+			this->x=x;
+			this->y=y;
+			color1=1;
+		}
+};
+class Charactor{
+public:
+	int x;
+	int y;
+	int r;
+	int hp;
+	int ani1;
+	int ani2;
+	int down;
+	Charactor(int x,int y)
+	{
+		this->x=x;
+		this->y=y;
+		this->r=10;
+		this->hp=5;
+		this->ani1=0;
+		this->ani2=0;
+		this->down=0;
+	}
+};
+
+
+class Bubble{
+public:
+	int x;
+	int y;
+//	int r;
+
+	int ani1;
+	int time;
+	Bubble(int x,int y)
+	{
+		this->x=x;
+		this->y=y;
+		this->ani1=0;
+		this->time=3;
+		
+	}
+	void move()
+	{
+		x=x;
+	}
+
+};
+
+class eff{
+public:
+	int ani;
+	int x;
+	int y;
+	eff(int x,int y)
+	{ 
+		this -> ani=0;
+		this -> x = x;
+		this -> y = y;
+	}
+};
+
+list<eff*>eff_list;
+list<eff*>::iterator eff_it;
+
+list<Bubble*>Bubble_list;
+list<Bubble*>::iterator Bubble_it;
+
+Charactor* player=new Charactor(100,100);
+
+map1* map=new map1[10];
+
+LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) 
+{
+	PAINTSTRUCT	ps;
+	HDC	hdc;
+	RECT Clip;
+
+	
+
+	switch (message)
+	{
+		case WM_CREATE:
+			hdc = GetDC(hwnd); 
+			//비트맵 로드	
+			for(i=0;i<50;i++){
+				hMemdc[i] = CreateCompatibleDC(hdc);
+			}	
+			
+
+
+			hBitmap[0] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP1));
+			hBitmap[1] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP2));
+			hBitmap[2] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP3));
+			hBitmap[3] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP4));//풍선
+			hBitmap[4] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP5)); //풍선
+			hBitmap[5] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP6)); //정면 내려가는모션
+			hBitmap[6] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP7));//정면 내려가는모션
+			hBitmap[7] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP8));//배경맵 타일1
+			hBitmap[8] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP9));//배경맵 타일1
+			hBitmap[9] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP10));
+			hBitmap[10] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP11));
+			hBitmap[11] = LoadBitmap((HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE),MAKEINTRESOURCE(IDB_BITMAP12));
+			
+			
+			//비트맵 로드	
+			for(i=0;i<50;i++){
+				SelectObject(hMemdc[i],hBitmap[i]);
+			}
+
+			//int a[20][20]={
+
+
+
+			//오프스크린
+			hOffdc = CreateCompatibleDC(hdc);
+			hOffBmp = CreateCompatibleBitmap(hdc, 800, 688);
+			SelectObject(hOffdc, hOffBmp);
+
+			//	타이머설정	
+			SetTimer(hwnd, 1, 1,NULL);//배경타이머
+			SetTimer(hwnd, 2, 1000,NULL);
+			SetTimer(hwnd, 3, 50, NULL);
+			SetTimer(hwnd, 4, 300, NULL); // 적 총알 생성
+			SetTimer(hwnd, 5, 500 , NULL);
+			SetTimer(hwnd, 7, 50, NULL); //캐릭터 아래로 갈때 모션
+			ReleaseDC(hwnd, hdc);
+			break;
+
+
+
+		case WM_TIMER:
+			hdc = GetDC(hwnd);
+
+			Key_Input(VK_UP, &UP_KEY);
+			Key_Input(VK_LEFT, &LEFT_KEY);
+			Key_Input(VK_DOWN, &DOWN_KEY);
+			Key_Input(VK_RIGHT, &RIGHT_KEY);
+			Key_Input(VK_SPACE, &SPACE_KEY);
+			if(player != NULL)
+			{
+				if (UP_KEY == HOLD_KEY)
+				{
+					player->y-=2;
+				
+				}
+				if (DOWN_KEY == HOLD_KEY)
+				{
+					player->y+=2;
+					player->down=1;
+					
+				}
+				if (LEFT_KEY == HOLD_KEY)
+				{
+					player->x-=2;
+				}
+				if (RIGHT_KEY == HOLD_KEY)
+				{
+					player->x+=2;
+				
+
+				}
+				if (SPACE_KEY == PUSH_KEY){
+				//	Bullet* temp = new Bullet( player->x, player->y);
+				//	blt_list.push_back(temp);
+					Bubble* temp9=new Bubble(player->x,player->y);
+					Bubble_list.push_back(temp9);
+				}
+			}
+
+			srand((unsigned int)time(NULL));
+			
+
+		
+
+		//	sprintf(buffer2, "SCORE: %d    ", count);
+	//	TextOut(hOffdc, 0, 15, buffer2, 15);
+			
+
+
+			if(bg_move1<0)
+			{
+				bg_move1=5500;
+			}
+			if(player !=NULL )
+			{
+			if(wParam == 1){
+				bg_move1-=10;
+				}
+			}
+		
+
+		
+		
+		
+
+			
+				if(player->down==1)
+				{
+					if(wParam==7)
+					{
+						//배찌 내려갈때 모션
+					
+						if(player->ani1<3)
+						{
+							
+							player->ani1++;
+						}
+						else
+						{
+							player->ani1=0;
+							player->down=0;
+						}
+					}
+				}
+
+	
+	
+				
+			//캐릭터 사망
+			if(player!=NULL && player->hp<0)
+			{
+				delete player;
+				player =NULL;
+			}
+				
+						
+			//맨위		
+			BitBlt(hOffdc,bg_move1,0,5500,688,hMemdc[0],0,0,SRCCOPY);//배경1
+			BitBlt(hOffdc,bg_move1-5500,0,5500,688,hMemdc[0],0,0,SRCCOPY);//배경2
+
+			//배찌	모션
+			if(player != NULL && player->down==1)
+			{
+				BitBlt(hOffdc, player->x, player->y,46,60,hMemdc[6],48*player->ani1,0,SRCAND);
+				BitBlt(hOffdc, player->x, player->y,46,60,hMemdc[5],48*player->ani1,0,SRCPAINT);
+			}
+
+			else if(player != NULL )
+			{
+				BitBlt(hOffdc, player->x, player->y,48,60,hMemdc[2],48*player->ani1,0,SRCAND);
+				BitBlt(hOffdc, player->x, player->y,48,60,hMemdc[1],0,0,SRCPAINT);
+			}
+		
+			
+ 				for(Bubble_it=Bubble_list.begin();Bubble_it!=Bubble_list.end();Bubble_it++)
+			{
+				BitBlt(hOffdc,(*Bubble_it)->x,(*Bubble_it)->y,20,20,hMemdc[3],0,20,SRCAND);
+				BitBlt(hOffdc,(*Bubble_it)->x,(*Bubble_it)->y,20,20,hMemdc[3],0,0,SRCPAINT);
+			}
+		
+		
+	
+			//캐릭터 체력
+			if(player!=NULL)
+			{
+				BitBlt(hOffdc,player->x,player->y,50,10,hMemdc[7],0,10,SRCCOPY);
+				BitBlt(hOffdc,player->x,player->y,50-50*(5-player->hp)/5,10,hMemdc[7],0,0,SRCCOPY);  
+			}
+			
+	
+//			//이펙트 생성
+//			for(eff_it=eff_list.begin();eff_it!=eff_list.end();eff_it++)
+//			{
+//				BitBlt(hOffdc,(*eff_it)->x,(*eff_it)->y,70,80,hMemdc[6],70*(*eff_it)->ani,0,SRCAND); 
+//				BitBlt(hOffdc,(*eff_it)->x,(*eff_it)->y,70,80,hMemdc[6],70*(*eff_it)->ani,80,SRCPAINT);  
+//			}
+			//물풍선
+			for(Bubble_it=Bubble_list.begin();Bubble_it!=Bubble_list.end();Bubble_it++)
+			{
+				BitBlt(hOffdc,(*Bubble_it)->x,(*Bubble_it)->y,24*(*Bubble_it)->ani1,8*(*Bubble_it)->ani1,hMemdc[13],0,0,SRCAND);
+				BitBlt(hOffdc,(*Bubble_it)->x,(*Bubble_it)->y,24*(*Bubble_it)->ani1,8*(*Bubble_it)->ani1,hMemdc[12],0,0,SRCPAINT);
+			}
+			/* 이거 중요함
+int a[5][5]={
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	{0,0,0,0,0}
+};
+			a[1][2]
+			for(int i=0;i<5;i++)
+			{
+				for(int j=0;j<5;j++)
+				{
+					BitBlt(hOffdc, j*10, i*10, 10, 10, hMemdc[a[i][j]], 0, 0, SRCCOPY);
+				}
+			}
+			*/
+			
+			//FPS측정
+			//Fps();
+			//sprintf(buffer, "FPS:%d  ", fps);
+			//TextOut(hOffdc, 0, 0, buffer, 8);
+
+			//스코어
+		//	if(boss!=NULL){
+		//	sprintf(buffer2, "SCORE: %d    ", boss->hp);
+		//	TextOut(hOffdc, 0, 15, buffer2, 15);
+		//	}
+			//게임화면출력
+			BitBlt(hdc,0,0,800,688,hOffdc,0,0,SRCCOPY);
+
+			ReleaseDC(hwnd,hdc);
+			break;
+
+		
+		case VK_ESCAPE:
+			PostQuitMessage(0);
+			break;
+
+		case WM_DESTROY:
+			//비트맵   
+			for(i=0;i<50;i++){
+				DeleteObject(hBitmap[i]);
+				DeleteDC(hMemdc[i]);
+			}
+
+			//오프스크린
+			DeleteObject(hOffBmp);
+			DeleteDC(hOffdc);
+
+			//타이머
+			KillTimer(hwnd, 1);
+			
+		
+			PostQuitMessage(0);
+			break;
+
+		default:
+			break;
+	}
+
+	return DefWindowProc (hwnd, message, wParam, lParam);
+}
+
+
+
+int a[5][5]={
+	{0,0,0,0,0},
+	{0,0,1,1,0},
+	{0,0,1,1,0},
+	{0,0,0,0,0},
+	{0,0,0,0,0}
+};
